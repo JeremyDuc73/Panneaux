@@ -1,0 +1,137 @@
+:root{
+    --blue: #0066cc;
+    --dark: #252729;
+    --light: #E3E3E3;
+}
+body{
+    margin: 0;
+}
+
+.panneaux{
+    display: flex;
+    width: 100%;
+    height: 100vh;
+}
+
+.panneau{
+    height: 100%;
+    width: 100%;
+    flex: 1;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: 2s flex ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.panneau:hover{
+    flex: 5;
+}
+.panneau:hover > .badge{
+    transform: translateY(0%);
+    opacity: 100%;
+}
+.panneau:hover > .lien{
+    transform: translateY(0%);
+    opacity: 100%;
+}
+
+.badge{
+    background-image: url("img/badge.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    border: 4px solid white;
+    transform: translateY(-100%);
+    transition : 1s;
+    opacity: 0%;
+}
+
+.lien{
+    transform: translateY(100%);
+    transition : 1s;
+    opacity: 0%;
+	position: relative;
+    display: block;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 250px;
+	padding: 10px 30px;
+	color: var(--light);
+	text-decoration: none;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	font-size: 20px;
+    font-weight: bold;
+	overflow: hidden;
+}
+.lien:nth-child(1){
+	filter: hue-rotate(115deg);
+}
+.lien:nth-child(3){
+	filter: hue-rotate(270deg);
+}
+.lien:hover{
+	transition-delay: 0.5s;
+	background: var(--light);
+	color: var(--blue);
+	box-shadow: 0 0 50px var(--light);
+}
+.lien:before{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 10px;
+	height: 10px;
+	border-top: 2px solid var(--light);
+	border-left: 2px solid var(--light);
+	transition: 0.5s;
+	transition-delay: 0.5s;
+}
+.lien:hover:before{
+	width: 100%;
+	height: 100%;
+	transition-delay: 0s;
+}
+.lien:after{
+	content: '';
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	width: 10px;
+	height: 10px;
+	border-bottom: 2px solid var(--light);
+	border-right: 2px solid var(--light);
+	transition: 0.5s;
+	transition-delay: 0.5s;
+}
+.lien:hover:after{
+	width: 100%;
+	height: 100%;
+	transition-delay: 0s;
+}
+
+
+
+.paysage1{
+    background-image: url("img/paysage1.jpg");
+}
+.paysage2{
+    background-image: url("img/paysage2.jpg");
+}
+.paysage3{
+    background-image: url("img/paysage3.jpg");
+}
+.paysage4{
+    background-image: url("img/paysage4.jpg");
+}
+.paysage5{
+    background-image: url("img/paysage5.jpg");
+}

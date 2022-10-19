@@ -26,7 +26,7 @@ body{
     justify-content: space-around;
     align-items: center;
 }
-.panneau:hover{
+.panneauOuvert{
     flex: 5;
 }
 .panneau:hover > .badge{
